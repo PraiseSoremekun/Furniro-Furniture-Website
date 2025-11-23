@@ -28,8 +28,7 @@ function Card() {
       name: "Leviosa",
       description: "Stylish cafe chair",
       price: 2500000,
-      previous: '',
-      discount: 0,
+      previous: "",
     },
     {
       id: 3,
@@ -48,7 +47,7 @@ function Card() {
       name: "Respira",
       description: "Outdoor bar table and stool",
       price: 500000,
-      discount: 10,
+      newItem: "New",
     },
     {
       id: 5,
@@ -57,7 +56,7 @@ function Card() {
       name: "Grifo",
       description: "Night lamp",
       price: 1500000,
-      discount: 0,
+      
     },
     {
       id: 6,
@@ -66,7 +65,7 @@ function Card() {
       name: "Muggo",
       description: "Small mug",
       price: 150000,
-      discount: 0,
+      newItem: "New",
     },
     {
       id: 7,
@@ -85,7 +84,7 @@ function Card() {
       name: "Potty",
       description: "Minimalist flower pot",
       price: 500000,
-      discount: 0,
+      newItem: "New",
     },
   ];
   return (
@@ -99,14 +98,28 @@ function Card() {
                 <img src={product.image} alt={product.name} />
                 <div className="p-2">
                   <h3 className="mb-1 text-[20px] font-bold">{product.name}</h3>
-                  <p className="text-[#898989] text-[15px] mb-1">{product.description}</p>
+                  <p className="text-[#898989] text-[15px] mb-1">
+                    {product.description}
+                  </p>
+                  {/* For the Price */}
                   <div className="flex gap-2 justify-items-center items-center">
                     <h4 className="text-[17px] font-bold"> {product.price}</h4>
-                    <h5 className="text-[#898989] text-[12px] line-through">{product.previous}</h5>
+                    <h5 className="text-[#898989] text-[12px] line-through">
+                      {product.previous}
+                    </h5>
                   </div>
-                  <h3 className="bg-[#E97171] rounded-full w-[40px] h-[40px] text-[17px] flex items-center justify-center absolute top-2 right-3 ">{product.discount}</h3>
+                  {/* For the discpunt side */}
+                  {product.discount ? (
+                    <span className="bg-[#E97171] rounded-full w-10 h-10 text-[15px] flex items-center justify-center absolute top-2 right-3">-{product.discount}%</span>
+                  ) : product.newItem ? (
+                    <span className="bg-[#2EC1AC] rounded-full w-10 h-10 text-[14px] flex items-center justify-center absolute top-2 right-3">{product.newItem}</span>
+                  ) : null}
+
+                  {/* The hover effect */}
                   <div className="absolute w-full h-full bg-black/60 flex items-center justify-center -bottom-0 -right-0 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                    <button className="bg-amber-50 text-[#B88E2F] text-[15px] py-3 px-10 cursor-pointer">Add to Cart</button>
+                    <button className="bg-amber-50 text-[#B88E2F] text-[15px] py-3 px-10 cursor-pointer">
+                      Add to Cart
+                    </button>
                     <div>
                       <img src="" alt="" />
                     </div>
@@ -119,10 +132,9 @@ function Card() {
       </div>
       <NavLink to={`shop`}>
         <div className="flex justify-center mt-6">
-          <button className="border-1 border-[#B88E2F] py-2 px-15 text-[#B88E2F] text-[12px] font-bold cursor-pointer">Show More</button>
-          <div>
-            <img src="" alt="" />
-          </div>
+          <button className="border-1 border-[#B88E2F] py-2 px-15 text-[#B88E2F] text-[12px] font-bold cursor-pointer">
+            Show More
+          </button>
         </div>
       </NavLink>
     </div>

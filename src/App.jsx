@@ -5,6 +5,7 @@ import Shop from "./pages/Shop"
 import About from "./pages/About"
 import Contact from "./pages/Contact"
 import ProductDetails from "./pages/ProductDetails";
+import Footer from "./components/Footer";
 
 
 const App =  () => {
@@ -19,6 +20,7 @@ const App =  () => {
           <Route path='/contact' element={<Contact/>} />
           <Route path='/product-details/:id' element={<ProductDetails/>} />
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </div>
   )
