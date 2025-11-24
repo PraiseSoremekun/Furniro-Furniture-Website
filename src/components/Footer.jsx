@@ -22,7 +22,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="border-t-2 border-gray-300 mt-3">
+    <div className="border-t border-gray-300">
       {/* first column */}
       <div className="w-[80%] m-auto mt-10">
         <div className=" flex gap-30 border-b-2 border-gray-200 pb-10">
