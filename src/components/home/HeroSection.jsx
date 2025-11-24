@@ -1,4 +1,6 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+import Shop from "../../pages/Shop";
 
 function HeroSection() {
   return (
@@ -16,9 +18,11 @@ function HeroSection() {
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. laudantium
             deserunt totam illo quam officia.
           </p>
-          <button className="px-16 py-4 font-bold bg-[#B88E2F] text-amber-50 text-base cursor-pointer ">
-            Buy Now
-          </button>
+          <NavLink to={`/shop`}>
+            <button className="px-16 py-4 font-bold bg-[#B88E2F] text-amber-50 text-base cursor-pointer ">
+              Buy Now
+            </button>
+          </NavLink>
         </div>
       </div>
     </div>

@@ -72,7 +72,7 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Enter your Email Address"
-                className="border-b border-black text-[13px]"
+                className="border-b border-black text-[13px] outline-none"
               />
               <button className=" ml-4 border-b border-black text-[13px] font-bold cursor-pointer">
                 SUBSCRIBE
@@ -80,7 +80,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <p className="mt-7 mb-7 text-[13px]">2023 furino. All rights reverved</p>
+        <p className="mt-6 mb-6 text-[13px]">2023 furino. All rights reverved</p>
       </div>
     </div>
   );

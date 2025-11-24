@@ -1,13 +1,22 @@
 import React from 'react'
 import HeroSection  from "../components/HeroSection"
+import Filter from '../components/shop/Filter'
+import Products from '../components/shop/Products'
 
 function Shop() {
   return (
-    <div className="w-full">
-      <HeroSection 
-      heroHeading="Shop" 
-      heroTitle={Shop}/>
-      <h1 className="text-center">Welcome to Shop Page</h1>
+    <div>
+      <div className="w-full">
+        <HeroSection 
+        heroHeading="Shop" 
+        heroTitle={Shop}/>
+      </div>
+      <div>
+        <Filter/>
+      </div>
+      <div>
+        <Products/>
+      </div>
     </div>
   ) 
 }
